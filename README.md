@@ -39,15 +39,14 @@ Search for `data-placeholder` to find them all:
 
 | Item | Where |
 |---|---|
-| Ownership status (e.g., woman-owned; SBA certification only once awarded) | Credential bar |
+| SBA WOSB certification — displayed as a design preview with a "Preview" tag; set `WOSB_CERTIFIED: true` in `assets/js/main.js` once SBA awards it | Credential bar, NAICS section, footer |
 | Primary NAICS | Credential bar |
 | SAM.gov registration status | NAICS section |
-| Certifications | NAICS section |
 | NAICS/PSC status — all currently "Target"; change `status--target` → `status--confirmed` once on SAM | NAICS table |
 | Marina Nicola's title | About |
 | Headquarters city/state | About |
 | Affiliated real estate brokerage name | Real Estate / REO |
-| Business email, phone, mailing address | Contact |
+| Business email, mailing address | Contact |
 | Contact form inbox — set `CONTACT_EMAIL` in `assets/js/main.js` | Contact |
 
 ## Capability Statement

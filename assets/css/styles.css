@@ -85,6 +85,20 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .section--dark .ph, .section--charcoal-band .ph, .credentials .ph, .ph--dark { color: var(--on-dark-muted); }
 
+/* Certification preview tag — shown until SITE.WOSB_CERTIFIED is true in main.js
+   (or when viewing with ?preview=final). Remove nothing else when certification is awarded. */
+.cert-preview {
+  display: inline-block; margin-left: .4rem; padding: .1rem .4rem; vertical-align: .1em;
+  font-size: .5938rem; font-weight: 600; font-style: normal; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--gold); border: 1px dashed currentColor; border-radius: var(--radius);
+}
+.section--cream .cert-preview, .naics__meta .cert-preview { color: var(--ink-muted); }
+.cert-final .cert-preview { display: none; }
+.contact__link { text-decoration: none; border-bottom: 1px solid var(--gold); }
+.contact__link:hover { color: var(--ink-muted); }
+.contact__link--dark { color: var(--on-dark); }
+.contact__link--dark:hover { color: var(--gold); }
+
 /* Verified identifiers (UEI, CAGE) */
 .data-id { font-weight: 500; letter-spacing: .08em; font-variant-numeric: tabular-nums; }
 
@@ -292,7 +306,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 /* ---------- Credential bar ---------- */
 .credentials { background: var(--charcoal); color: var(--on-dark); border-top: 1px solid var(--rule-dark); }
-.credentials__list { display: grid; grid-template-columns: repeat(5, 1fr); }
+.credentials__list { display: grid; grid-template-columns: repeat(6, auto); justify-content: space-between; }
 .credentials__item { padding: 1.6rem 1.5rem; border-left: 1px solid var(--rule-dark); }
 .credentials__item:first-child { border-left: 0; padding-left: 0; }
 .credentials dt { font-size: .6875rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: .4rem; }
@@ -301,8 +315,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .credentials__list { grid-template-columns: repeat(2, 1fr); }
   .credentials__item, .credentials__item:first-child { padding: 1.25rem 0; border-left: 0; border-bottom: 1px solid var(--rule-dark); }
   .credentials__item:nth-child(even) { padding-left: 1.25rem; border-left: 1px solid var(--rule-dark); }
-  .credentials__item--cta { grid-column: 1 / -1; border-bottom: 0; }
-  .credentials__item--cta:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .credentials__list { justify-content: stretch; }
+  .credentials__item:nth-last-child(-n+2) { border-bottom: 0; }
 }
 
 /* ---------- About ---------- */

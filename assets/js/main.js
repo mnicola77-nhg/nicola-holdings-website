@@ -8,8 +8,12 @@
    CONTACT_EMAIL: the business inbox the contact form should address.
                   Leave empty until a verified business email exists.
    CAPABILITY_STATEMENT: path to the PDF. The button activates automatically
-                  once this file exists in the repository. */
+                  once this file exists in the repository.
+   WOSB_CERTIFIED: set to true once SBA has awarded WOSB certification. While false,
+                  every WOSB reference carries a small "Preview" tag. Add ?preview=final
+                  to the page URL to see the finished, tag-free design without changing this. */
 const SITE = {
+  WOSB_CERTIFIED: false,
   CONTACT_EMAIL: "",
   CAPABILITY_STATEMENT: "files/capability-statement.pdf",
 };
@@ -19,6 +23,10 @@ const SITE = {
 
   const root = document.documentElement;
   root.classList.add("js");
+
+  /* ---------- WOSB certification display ---------- */
+  const previewFinal = new URLSearchParams(location.search).get("preview") === "final";
+  if (SITE.WOSB_CERTIFIED || previewFinal) root.classList.add("cert-final");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- Footer year ---------- */
