@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nicolaholdingsgroup.com/sitemap.xml
