@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--
+  Nicola Holdings Group — Capability Statement (editable source)
+  Rendered to files/capability-statement.pdf by build.py in this folder.
+  WOSB: the "Preview" tag mirrors the website. Build with --final (adds class
+  "cert-final" to <html>) only after SBA has awarded WOSB certification.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Nicola Holdings Group, LLC — Capability Statement</title>
+<style>
+  @font-face { font-family: "Cormorant Garamond"; font-weight: 500; font-style: normal; src: url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Cormorant Garamond"; font-weight: 600; font-style: normal; src: url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Cormorant Garamond"; font-weight: 500; font-style: italic; src: url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2"); }
+  @font-face { font-family: "Jost"; font-weight: 400; src: url(fonts/jost-latin-400-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Jost"; font-weight: 500; src: url(fonts/jost-latin-500-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Jost"; font-weight: 600; src: url(fonts/jost-latin-600-normal.woff2) format("woff2"); }
+
+  :root {
+    --charcoal: #1A1A1A; --beige: #D9C9B1; --cream: #F6F1EA; --gold: #C9A96A; --stone: #8A8A8A;
+    --black: #0F0F0F; --paper: #EFE7DB; --ink-muted: #55504A; --on-dark-muted: #BDB6AC;
+    --rule: rgba(26,26,26,.16); --rule-dark: rgba(217,201,177,.24);
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "Jost", "Helvetica Neue", Arial, sans-serif;
+    --px: .42in; /* page side margin */
+  }
+  @page { size: 8.5in 11in; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 8.5in; height: 11in; }
+  body {
+    font-family: var(--sans); font-size: 7.9pt; line-height: 1.4; color: var(--charcoal);
+    background: var(--cream); -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    font-variant-numeric: lining-nums;
+  }
+  ul { list-style: none; }
+  .page { width: 8.5in; height: 11in; display: flex; flex-direction: column; overflow: hidden; }
+
+  .label { font-size: 5.9pt; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; }
+  .sec-head { display: flex; align-items: center; gap: 6pt; margin-bottom: 5pt; }
+  .sec-head .num { font-size: 5.9pt; letter-spacing: .18em; color: var(--ink-muted); }
+  .sec-head .line { width: 16pt; height: .6pt; background: var(--gold); }
+  .sec-head h2 { font-family: var(--serif); font-weight: 600; font-size: 13.5pt; line-height: 1; }
+
+  /* ---------- Header ---------- */
+  .header {
+    position: relative; background: var(--black); color: var(--cream);
+    padding: .15in var(--px) .14in; display: grid; grid-template-columns: 1.85in 1fr; gap: .34in; align-items: center;
+  }
+  .header::before {
+    content: ""; position: absolute; inset: 0; opacity: .55; pointer-events: none;
+    background-image: linear-gradient(to right, rgba(217,201,177,.06) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(217,201,177,.06) 1px, transparent 1px);
+    background-size: 26pt 26pt;
+  }
+  .header > * { position: relative; }
+  .header__logo img { width: 100%; display: block; }
+  .header__doc { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 6pt; border-bottom: .6pt solid var(--rule-dark); }
+  .header__doc h1 { font-family: var(--serif); font-weight: 500; font-size: 22pt; line-height: 1; white-space: nowrap; }
+  .header__doc h1 em { color: var(--beige); }
+  .header__doc .label { color: var(--gold); }
+  .ids { display: grid; grid-template-columns: 1.2fr 1.05fr 1.35fr; }
+  .ids div { padding: 5.5pt 0 5pt; }
+  .ids div:nth-child(-n+3) { border-bottom: .6pt solid var(--rule-dark); }
+  .ids div:not(:nth-child(3n+1)) { padding-left: 10pt; border-left: .6pt solid var(--rule-dark); }
+  .ids dt { color: var(--gold); margin-bottom: 2pt; }
+  .ids dd { font-size: 9pt; font-weight: 500; letter-spacing: .03em; white-space: nowrap; }
+  .ids dd.mono { letter-spacing: .09em; }
+  .gold-rule { height: 2pt; background: var(--gold); }
+
+  .preview {
+    display: inline-block; margin-left: 4pt; padding: .5pt 2.6pt; vertical-align: 1.2pt;
+    font-size: 5pt; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; line-height: 1.3;
+    color: var(--gold); border: .6pt dashed currentColor; border-radius: 1pt;
+  }
+  .cert-final .preview { display: none; }
+
+  /* ---------- Overview | Markets ---------- */
+  .intro { display: grid; grid-template-columns: 1fr 3.5in; gap: .3in; padding: .14in var(--px) .08in; }
+  .overview p { font-size: 8.1pt; line-height: 1.45; }
+  .overview p + p { margin-top: 3.5pt; color: var(--ink-muted); }
+  .markets ul { display: grid; grid-template-columns: 1fr 1fr; gap: 0 10pt; }
+  .markets li { padding: 3.2pt 0 3.2pt 9pt; border-top: .6pt solid var(--rule); font-size: 7.7pt; font-weight: 500; line-height: 1.25; position: relative; }
+  .markets li:nth-last-child(-n+2) { border-bottom: .6pt solid var(--rule); }
+  .markets li::before { content: ""; position: absolute; left: 0; top: .72em; width: 3.2pt; height: 3.2pt; border: .6pt solid var(--gold); transform: rotate(45deg); }
+
+  /* ---------- Core Competencies ---------- */
+  .competencies { padding: .02in var(--px) .1in; }
+  .caps { display: grid; grid-template-columns: repeat(4, 1fr); border-top: .6pt solid var(--rule); border-left: .6pt solid var(--rule); }
+  .cap { padding: 5.5pt 7pt 6pt; border-right: .6pt solid var(--rule); border-bottom: .6pt solid var(--rule); }
+  .cap h3 { display: flex; justify-content: space-between; align-items: baseline; gap: 4pt; font-family: var(--serif); font-weight: 600; font-size: 9.6pt; line-height: 1.08; margin-bottom: 3pt; white-space: nowrap; }
+  .cap h3 .n { font-weight: 500; font-size: 7.6pt; color: var(--stone); }
+  .cap li { position: relative; padding-left: 7pt; font-size: 7.55pt; line-height: 1.37; color: var(--ink-muted); }
+  .cap li::before { content: ""; position: absolute; left: 0; top: .7em; width: 4pt; height: .6pt; background: var(--gold); }
+  .cap--wide { grid-column: span 2; background: var(--charcoal); color: var(--cream); }
+  .cap--wide h3 { min-height: 0; margin-bottom: 4pt; }
+  .cap--wide h3 .n { color: var(--beige); }
+  .cap--wide ul { columns: 2; column-gap: 12pt; }
+  .cap--wide li { color: var(--on-dark-muted); break-inside: avoid; }
+
+  /* ---------- Differentiators ---------- */
+  .diffs { padding: .02in var(--px) .1in; }
+  .diffs ul { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 14pt; }
+  .diffs li { padding: 4.5pt 0 5pt; border-top: .8pt solid var(--charcoal); }
+  .diffs li:nth-child(n+4) { border-top-color: var(--rule); }
+  .diffs strong { display: block; font-family: var(--serif); font-weight: 600; font-size: 9.8pt; line-height: 1.12; }
+  .diffs span { display: block; color: var(--ink-muted); font-size: 7.55pt; line-height: 1.36; margin-top: 1.5pt; }
+
+  /* ---------- NAICS band ---------- */
+  .naics { background: var(--paper); padding: .12in var(--px) .1in; }
+  .naics__list { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(6, auto); grid-auto-flow: column; gap: 0 22pt; }
+  .naics__list { margin-bottom: 4pt; }
+  .naics__list li { display: grid; grid-template-columns: 34pt 1fr; gap: 3pt; padding: 2pt 0; border-top: .6pt solid var(--rule); font-size: 7.1pt; line-height: 1.28; }
+  .naics__list .is-primary .code { position: relative; }
+  .naics__list .is-primary .code::after { position: absolute; left: 100%; top: 3.2pt; }
+  .naics__list .is-primary .code::after, .primary-key::before { content: ""; display: inline-block; width: 3.6pt; height: 3.6pt; background: var(--gold); transform: rotate(45deg); margin-left: 2.5pt; vertical-align: 1.6pt; }
+  .primary-key::before { margin: 0 4pt 0 0; }
+  .naics__list .code { font-weight: 600; font-size: 7.6pt; letter-spacing: .03em; }
+  .tag { display: inline-block; margin-left: 2pt; padding: .3pt 2.4pt; font-size: 4.9pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; vertical-align: .8pt; border: .6pt solid currentColor; border-radius: 1pt; color: var(--ink-muted); line-height: 1.35; }
+  .tag--primary { background: var(--beige); border-color: var(--beige); color: var(--charcoal); }
+  .naics__foot { display: flex; justify-content: space-between; align-items: baseline; gap: 14pt; padding-top: 4pt; border-top: .6pt solid var(--rule); font-size: 7.3pt; }
+  .naics__foot .label { color: var(--ink-muted); margin-right: 5pt; }
+  .naics__note { font-size: 6.7pt; color: var(--ink-muted); }
+
+  /* ---------- Teaming + credential ---------- */
+  .lower { display: grid; grid-template-columns: 1fr 3.3in; gap: .26in; padding: .11in var(--px) .11in; align-items: center; }
+  .teaming p { font-size: 7.9pt; line-height: 1.45; }
+  .teaming .partners { display: flex; flex-wrap: wrap; gap: 2pt 11pt; margin: 4pt 0 5pt; }
+  .teaming .partners li { position: relative; padding-left: 8pt; font-size: 7.6pt; font-weight: 500; }
+  .teaming .partners li::before { content: ""; position: absolute; left: 0; top: .52em; width: 3.2pt; height: 3.2pt; border: .6pt solid var(--gold); transform: rotate(45deg); }
+  .teaming p b { font-weight: 500; }
+  .teaming .standard { margin-top: 5pt; font-size: 7.3pt; color: var(--ink-muted); border-left: .8pt solid var(--gold); padding-left: 7pt; }
+
+  .cred { position: relative; background: var(--charcoal); color: var(--cream); padding: 8pt 12pt 8pt 15pt; }
+  .cred::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2.4pt; background: var(--gold); }
+  .cred .label { color: var(--gold); }
+  .cred .name { font-family: var(--serif); font-size: 14pt; line-height: 1.05; margin-top: 3pt; }
+  .cred .title { font-family: var(--sans); font-size: 7.4pt; color: var(--on-dark-muted); margin-left: 6pt; letter-spacing: .02em; }
+  .cred .lic { margin-top: 5pt; padding-top: 5pt; border-top: .6pt solid var(--rule-dark); font-size: 7.3pt; white-space: nowrap; }
+  .cred .lic b { font-weight: 500; letter-spacing: .04em; color: var(--beige); }
+  .cred .lic i { font-style: normal; color: var(--gold); margin: 0 3.5pt; }
+  .cred .disc { margin-top: 4pt; font-size: 6.6pt; line-height: 1.35; color: var(--on-dark-muted); }
+
+  /* ---------- Footer ---------- */
+  .footer { margin-top: auto; background: var(--black); color: var(--cream); padding: .11in var(--px); display: grid; grid-template-columns: auto 1fr; gap: .24in; align-items: center; }
+  .footer__mark { height: .4in; width: auto; display: block; }
+  .footer__contact { display: grid; grid-template-columns: 1fr 1.45fr .9fr 1.5fr; }
+  .footer__contact div { padding: 0 11pt; border-left: .6pt solid var(--rule-dark); }
+  .footer__contact dt { color: var(--gold); margin-bottom: 2pt; }
+  .footer__contact dd { font-size: 8.8pt; letter-spacing: .03em; white-space: nowrap; }
+  .footer__contact dd.phone { font-size: 11pt; font-weight: 500; letter-spacing: .04em; line-height: 1.05; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 1. HEADER / IDENTITY -->
+  <header class="header">
+    <div class="header__logo">
+      <img src="../../assets/images/brand/nhg-logo-primary.png" alt="Nicola Holdings Group — Building Solutions. Strengthening Communities.">
+    </div>
+    <div class="header__data">
+      <div class="header__doc">
+        <h1>Capability <em>Statement</em></h1>
+        <span class="label">Nicola Holdings Group, LLC</span>
+      </div>
+      <dl class="ids">
+        <div><dt class="label">UEI</dt><dd class="mono">ZTD1DWXEN8N9</dd></div>
+        <div><dt class="label">CAGE Code</dt><dd class="mono">23PG0</dd></div>
+        <div><dt class="label">Primary NAICS</dt><dd class="mono">236220</dd></div>
+        <div><dt class="label">Ownership</dt><dd>100% Woman-Owned</dd></div>
+        <div><dt class="label">Certification</dt><dd>SBA Certified WOSB<span class="preview">Preview</span></dd></div>
+        <div><dt class="label">Website</dt><dd>NICOLAHOLDINGSGROUP.COM</dd></div>
+      </dl>
+    </div>
+  </header>
+  <div class="gold-rule"></div>
+
+  <!-- 2. OVERVIEW | MARKETS -->
+  <section class="intro">
+    <div class="overview">
+      <div class="sec-head"><span class="num">01</span><span class="line"></span><h2>Company Overview</h2></div>
+      <p>
+        Nicola Holdings Group, LLC is a Florida-based, diversified government and commercial contracting
+        company coordinating construction, facility, property, procurement, and specialty-trade requirements.
+      </p>
+      <p>
+        Delivery combines direct project coordination with qualified specialty subcontractors, licensed
+        trades, suppliers, and strategic teaming partners, under one accountable point of contact.
+      </p>
+    </div>
+    <div class="markets">
+      <div class="sec-head"><span class="num">02</span><span class="line"></span><h2>Markets &amp; Buyers</h2></div>
+      <ul>
+        <li>Federal Agencies</li>
+        <li>Commercial &amp; Institutional Facilities</li>
+        <li>State &amp; Local Government</li>
+        <li>Property / REO</li>
+        <li>Prime Contractors</li>
+        <li>Veteran-Serving Housing Organizations</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. CORE COMPETENCIES -->
+  <section class="competencies">
+    <div class="sec-head"><span class="num">03</span><span class="line"></span><h2>Core Competencies</h2></div>
+    <div class="caps">
+        <div class="cap">
+          <h3>Construction &amp; Renovation</h3>
+          <ul><li>General construction</li><li>Commercial renovations</li><li>Tenant and facility build-outs</li><li>Interior and exterior improvements</li><li>Site improvements</li></ul>
+        </div>
+        <div class="cap">
+          <h3>Facility Services</h3>
+          <ul><li>Facility support</li><li>Preventive maintenance</li><li>Property maintenance</li><li>Turnover and readiness support</li><li>Building systems coordination</li></ul>
+        </div>
+        <div class="cap">
+          <h3>Mechanical / Electrical / Plumbing</h3>
+          <ul><li>HVAC and mechanical systems</li><li>Electrical</li><li>Plumbing</li><li>Building automation</li><li>Energy-efficiency improvements</li></ul>
+        </div>
+        <div class="cap">
+          <h3>Signage &amp; Wayfinding</h3>
+          <ul><li>Facility and ADA signage</li><li>Wayfinding systems</li><li>Building identification</li><li>Monument and digital signage</li><li>Installation coordination</li></ul>
+        </div>
+        <div class="cap">
+          <h3>Procurement &amp; Logistics</h3>
+          <ul><li>Equipment sourcing</li><li>Material procurement</li><li>Vendor coordination</li><li>Logistics support</li></ul>
+        </div>
+        <div class="cap">
+          <h3>Real Estate / REO</h3>
+          <ul><li>Property support</li><li>REO-related coordination</li><li>Property sourcing support</li><li>Asset and property support</li><li>Rehabilitation coordination</li></ul>
+        </div>
+        <div class="cap cap--wide">
+          <h3>Veteran Housing &amp; Property Support</h3>
+          <ul><li>Property sourcing support</li><li>Rehabilitation coordination</li><li>Property maintenance</li><li>Turnover readiness</li><li>Facility and property support for veteran-serving housing initiatives</li></ul>
+        </div>
+      </div>
+  </section>
+
+  <!-- 4. DIFFERENTIATORS -->
+  <section class="diffs">
+    <div class="sec-head"><span class="num">04</span><span class="line"></span><h2>Differentiators</h2></div>
+    <ul>
+      <li><strong>Single Point of Coordination</strong><span>One contact for scope, schedule, and trades.</span></li>
+      <li><strong>Property + Construction Perspective</strong><span>Real estate insight guides rehab and readiness.</span></li>
+      <li><strong>Strategic Teaming &amp; Trade Network</strong><span>Teams built per requirement with licensed trades.</span></li>
+      <li><strong>Procurement-Aware Delivery</strong><span>Built around solicitation and compliance needs.</span></li>
+      <li><strong>Scalable Project Support</strong><span>Capacity sized through vetted partners.</span></li>
+      <li><strong>Vendor &amp; Subcontractor Coordination</strong><span>Sourcing, scheduling, and oversight handled.</span></li>
+    </ul>
+  </section>
+
+  <!-- 5. NAICS / PSC -->
+  <section class="naics">
+    <div>
+      <div class="sec-head"><span class="num">05</span><span class="line"></span><h2>NAICS Codes</h2></div>
+      <ul class="naics__list">
+        <li class="is-primary"><span class="code">236220</span><span>Commercial and Institutional Building Construction</span></li>
+        <li><span class="code">236118</span><span>Residential Remodelers</span></li>
+        <li><span class="code">238160</span><span>Roofing Contractors</span></li>
+        <li><span class="code">238210</span><span>Electrical Contractors and Other Wiring Installation Contractors</span></li>
+        <li><span class="code">238220</span><span>Plumbing, Heating, and Air-Conditioning Contractors</span></li>
+        <li><span class="code">238990</span><span>All Other Specialty Trade Contractors</span></li>
+        <li><span class="code">541614</span><span>Process, Physical Distribution, and Logistics Consulting Services</span></li>
+        <li><span class="code">339950</span><span>Sign Manufacturing <span class="tag">Target</span></span></li>
+        <li><span class="code">561210</span><span>Facilities Support Services</span></li>
+        <li><span class="code">561720</span><span>Janitorial Services</span></li>
+        <li><span class="code">561730</span><span>Landscaping Services</span></li>
+        <li><span class="code">561790</span><span>Other Services to Buildings and Dwellings</span></li>
+      </ul>
+    </div>
+    <div class="naics__foot">
+      <p><span class="label">PSC</span>9905 — Signs, Advertising Displays, and Identification Plates <span class="tag">Target</span></p>
+      <p class="naics__note"><span class="primary-key"><b>Primary</b></span> &nbsp;&nbsp;<b>Target</b> = additional work pursued; not yet on SAM.gov registration.</p>
+    </div>
+  </section>
+
+  <!-- 6. TEAMING + CREDENTIAL -->
+  <section class="lower">
+    <div class="teaming">
+      <div class="sec-head"><span class="num">06</span><span class="line"></span><h2>Teaming &amp; Delivery</h2></div>
+      <p>We welcome teaming, subcontracting, and supply relationships with <b>prime contractors</b>,
+        <b>specialty subcontractors</b>, <b>suppliers</b>, <b>property partners</b>, and
+        <b>government contracting partners</b>.</p>
+      <p class="standard">Partner experience is always identified as teaming partner or key personnel experience, never as Nicola Holdings Group's own past performance.</p>
+    </div>
+    <aside class="cred">
+      <span class="label">Leadership · Individual Credential</span>
+      <p class="name">Marina Nicola <span class="title">Founder &amp; Managing Member</span></p>
+      <p class="lic">Florida Licensed Real Estate Sales Associate<i>|</i><b>License SL3476941</b></p>
+      <p class="disc">This license is held by Marina Nicola individually. Nicola Holdings Group, LLC is not a licensed real estate brokerage.</p>
+    </aside>
+  </section>
+
+  <!-- 7. CONTACT -->
+  <footer class="footer">
+    <img class="footer__mark" src="../../assets/images/brand/nhg-mark-light.png" alt="Nicola Holdings Group NH mark">
+    <dl class="footer__contact">
+      <div><dt class="label">Phone</dt><dd class="phone">727-729-0204</dd></div>
+      <div><dt class="label">Website</dt><dd>NICOLAHOLDINGSGROUP.COM</dd></div>
+      <div><dt class="label">Headquarters</dt><dd>Florida</dd></div>
+      <div><dt class="label">UEI · CAGE</dt><dd>ZTD1DWXEN8N9 · 23PG0</dd></div>
+    </dl>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,9 +1,11 @@
 # files/
 
-Place the finalized capability statement here as:
+`capability-statement.pdf` is the published capability statement linked from every
+Capability Statement button on the website.
 
-    capability-statement.pdf
+Do not edit the PDF directly. Its editable source lives in
+`source/capability-statement/`; after changing the source, rebuild with:
 
-Once that exact file name exists in the repository, the "Capability Statement"
-buttons on the website switch from "Coming soon" to a live download automatically.
-No code changes are needed.
+    python source/capability-statement/build.py
+
+(Use `--final` only after SBA has awarded WOSB certification.)

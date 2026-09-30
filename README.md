@@ -23,7 +23,8 @@ Official website repository for Nicola Holdings Group, LLC.
         source/                Original brand files as delivered (do not edit)
       favicon-*.png, apple-touch-icon.png, icon-*.png, og-image.jpg
   files/
-    capability-statement.pdf (add when finalized)
+    capability-statement.pdf  Published capability statement
+  source/capability-statement/  Editable capability statement source, fonts, build script
 ```
 
 ## Brand
@@ -44,8 +45,12 @@ Items not yet displayed or still in preview:
 
 ## Capability Statement
 
-Upload the final PDF as `files/capability-statement.pdf`. The site detects it automatically
-and turns every "Capability Statement" button into a live download — no code changes.
+- Published PDF: `files/capability-statement.pdf` (linked from the header, credential bar, and contact section).
+- Editable source: `source/capability-statement/capability-statement.html` (same fonts, palette, and logo files as the site).
+- Rebuild after edits: `python source/capability-statement/build.py`. This writes the site PDF, a named copy
+  (`Nicola-Holdings-Group-Capability-Statement.pdf`), and a 300 dpi preview PNG, and fails if content overflows one page.
+- WOSB: shows the same "Preview" tag as the website. When SBA certification is awarded, set
+  `WOSB_CERTIFIED: true` in `assets/js/main.js` **and** rebuild the PDF with `--final`.
 
 ## Custom domain (when ready)
 

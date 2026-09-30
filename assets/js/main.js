@@ -7,15 +7,12 @@
 /* ---------- SITE SETTINGS (edit these) ----------
    CONTACT_EMAIL: the business inbox the contact form should address.
                   Leave empty until a verified business email exists.
-   CAPABILITY_STATEMENT: path to the PDF. The button activates automatically
-                  once this file exists in the repository.
    WOSB_CERTIFIED: set to true once SBA has awarded WOSB certification. While false,
                   every WOSB reference carries a small "Preview" tag. Add ?preview=final
                   to the page URL to see the finished, tag-free design without changing this. */
 const SITE = {
   WOSB_CERTIFIED: false,
   CONTACT_EMAIL: "",
-  CAPABILITY_STATEMENT: "files/capability-statement.pdf",
 };
 
 (function () {
@@ -103,27 +100,6 @@ const SITE = {
     });
   } else {
     reveals.forEach((el) => el.classList.add("is-visible"));
-  }
-
-  /* ---------- Capability Statement: enable only if the PDF exists ---------- */
-  const capLinks = document.querySelectorAll("[data-capstatement]");
-  if (capLinks.length && location.protocol !== "file:") {
-    fetch(SITE.CAPABILITY_STATEMENT, { method: "HEAD", cache: "no-store" })
-      .then((res) => {
-        const type = res.headers.get("content-type") || "";
-        if (!res.ok || !type.includes("pdf")) return;
-        capLinks.forEach((el) => {
-          el.setAttribute("href", SITE.CAPABILITY_STATEMENT);
-          el.setAttribute("target", "_blank");
-          el.setAttribute("rel", "noopener");
-          el.removeAttribute("aria-disabled");
-          el.removeAttribute("role");
-          const note = el.querySelector("[data-capstatement-note]");
-          if (note) note.textContent = "PDF";
-          else el.textContent = "Download PDF";
-        });
-      })
-      .catch(() => { /* stays in "coming soon" state */ });
   }
 
   /* ---------- Contact form (static: opens the visitor's email app) ---------- */
