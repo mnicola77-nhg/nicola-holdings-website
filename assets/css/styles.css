@@ -400,7 +400,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .credential-card__label { font-size: .6875rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
 .credential-card__name { margin-top: .9rem; font-family: var(--font-display); font-size: 2rem; line-height: 1.1; }
 .credential-card__cred { margin-top: .35rem; color: var(--on-dark); }
-.credential-card__lic { margin-top: .2rem; font-size: .875rem; letter-spacing: .12em; text-transform: uppercase; color: var(--beige); }
+.credential-card__lic { font-size: .875rem; letter-spacing: .12em; text-transform: uppercase; color: var(--beige); white-space: nowrap; }
+.credential-card__sep { color: var(--gold); margin-inline: .45rem; }
 .credential-card .ph { color: var(--on-dark-muted); }
 .credential-card__broker { margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid var(--rule-dark); font-size: .875rem; color: var(--on-dark-muted); }
 .disclosure { margin-top: 1.5rem; font-size: .875rem; line-height: 1.6; color: var(--ink-muted); max-width: 64ch; }
@@ -479,6 +480,14 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .contact__details div { display: grid; grid-template-columns: 6rem 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--rule-light); }
 .contact__details dt { font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-muted); padding-top: .15rem; }
 
+.contact-call { position: relative; padding: clamp(2rem, 4vw, 3rem); background: var(--charcoal); color: var(--on-dark); }
+.contact-call::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--gold); }
+.contact-call__label { font-size: .6875rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+.contact-call__number { display: inline-block; margin-top: .9rem; font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.4rem); line-height: 1; color: var(--on-dark); text-decoration: none; letter-spacing: .01em; }
+.contact-call__number:hover { color: var(--beige); }
+.contact-call__text { margin-top: 1.25rem; max-width: 46ch; color: var(--on-dark-muted); }
+.contact-call .btn { margin-top: 1.75rem; }
+.contact-form[hidden] { display: none; }
 .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 1.75rem; padding: clamp(1.75rem, 4vw, 3rem); background: #fff; border: 1px solid var(--rule-light); }
 .field { display: flex; flex-direction: column; gap: .45rem; }
 .field--full { grid-column: 1 / -1; }

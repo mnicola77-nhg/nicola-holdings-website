@@ -34,20 +34,13 @@ Logos are used as delivered — only cropped, resized, and given transparent bac
 
 ## Placeholders still requiring verified information
 
-Every unverified value in `index.html` is marked with `data-placeholder="..."`.
-Search for `data-placeholder` to find them all:
+Items not yet displayed or still in preview:
 
 | Item | Where |
 |---|---|
 | SBA WOSB certification — displayed as a design preview with a "Preview" tag; set `WOSB_CERTIFIED: true` in `assets/js/main.js` once SBA awards it | Credential bar, NAICS section, footer |
-| Primary NAICS | Credential bar |
-| SAM.gov registration status | NAICS section |
 | NAICS/PSC status — all currently "Target"; change `status--target` → `status--confirmed` once on SAM | NAICS table |
-| Marina Nicola's title | About |
-| Headquarters city/state | About |
-| Affiliated real estate brokerage name | Real Estate / REO |
-| Business email, mailing address | Contact |
-| Contact form inbox — set `CONTACT_EMAIL` in `assets/js/main.js` | Contact |
+| Email inquiry form — hidden until `CONTACT_EMAIL` is set in `assets/js/main.js`; phone 727-729-0204 is the primary contact | Contact |
 
 ## Capability Statement
 

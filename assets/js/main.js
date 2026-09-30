@@ -130,6 +130,9 @@ const SITE = {
   const form = document.querySelector("[data-contact-form]");
   const status = document.querySelector("[data-form-status]");
 
+  // With a business email configured, the inquiry form appears beneath the phone panel.
+  if (form && SITE.CONTACT_EMAIL) form.hidden = false;
+
   if (form && status) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();

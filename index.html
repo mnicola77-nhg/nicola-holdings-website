@@ -157,8 +157,8 @@
             <dd>SBA Certified WOSB <span class="cert-preview" data-cert-preview>Preview</span></dd>
           </div>
           <div class="credentials__item">
-            <dt>Primary NAICS</dt>
-            <dd><span class="ph" data-placeholder="Primary NAICS">To be confirmed</span></dd>
+            <dt>NAICS</dt>
+            <dd><a class="text-link" href="#naics">View codes</a></dd>
           </div>
           <div class="credentials__item credentials__item--cta">
             <dt>Capability Statement</dt>
@@ -194,8 +194,8 @@
           </p>
           <dl class="about-facts">
             <div><dt>Legal name</dt><dd>Nicola Holdings Group, LLC</dd></div>
-            <div><dt>Leadership</dt><dd>Marina Nicola, <span class="ph" data-placeholder="Marina's title">title to be confirmed</span></dd></div>
-            <div><dt>Headquarters</dt><dd><span class="ph" data-placeholder="City, State">City, State — to be confirmed</span></dd></div>
+            <div><dt>Leadership</dt><dd>Marina Nicola, Founder &amp; Managing Member</dd></div>
+            <div><dt>Headquarters</dt><dd>Florida</dd></div>
           </dl>
         </div>
       </div>
@@ -410,11 +410,7 @@
           <aside class="credential-card" aria-label="Professional real estate credential">
             <p class="credential-card__label">Individual Professional Credential</p>
             <p class="credential-card__name">Marina Nicola</p>
-            <p class="credential-card__cred">Florida Licensed Real Estate Sales Associate</p>
-            <p class="credential-card__lic">License SL3476941</p>
-            <p class="credential-card__broker">
-              Affiliated broker: <span class="ph" data-placeholder="Affiliated brokerage name">brokerage name to be confirmed</span>
-            </p>
+            <p class="credential-card__cred">Florida Licensed Real Estate Sales Associate <span class="credential-card__sep" aria-hidden="true">|</span> <span class="credential-card__lic">License SL3476941</span></p>
           </aside>
 
           <p class="disclosure">
@@ -520,7 +516,6 @@
 
           <dl class="naics__meta">
             <div><dt>Related PSC</dt><dd>9905 — Signs, Advertising Displays, and Identification Plates <span class="status status--target">Target</span></dd></div>
-            <div><dt>SAM.gov registration</dt><dd><span class="ph" data-placeholder="SAM status">Status to be confirmed</span></dd></div>
             <div><dt>Certifications</dt><dd>SBA Certified Woman-Owned Small Business (WOSB) <span class="cert-preview" data-cert-preview>Preview</span></dd></div>
             <div><dt>Ownership</dt><dd>100% Woman-Owned</dd></div>
           </dl>
@@ -568,9 +563,8 @@
           <p class="section-index">10 <span>Contact</span></p>
           <h2 class="section-title" id="contact-title">Discuss a requirement, a project, or a partnership.</h2>
           <dl class="contact__details">
-            <div><dt>Email</dt><dd><span class="ph" data-placeholder="Business email">Business email to be added</span></dd></div>
             <div><dt>Phone</dt><dd><a class="contact__link" href="tel:+17277290204">727-729-0204</a></dd></div>
-            <div><dt>Location</dt><dd><span class="ph" data-placeholder="Business mailing address">Business address to be added</span></dd></div>
+            <div><dt>Location</dt><dd>Florida</dd></div>
           </dl>
         </header>
 
@@ -578,7 +572,19 @@
           Static form (no backend). On submit, main.js opens the visitor's email app addressed to
           CONTACT_EMAIL in main.js. Until that address is set, the form shows a notice instead.
         -->
-        <form class="contact-form reveal" data-contact-form novalidate>
+        <!-- Primary contact: phone. Shown until a business email is configured. -->
+        <div class="contact-call reveal" data-contact-call>
+          <p class="contact-call__label">Call Nicola Holdings Group</p>
+          <a class="contact-call__number" href="tel:+17277290204">727-729-0204</a>
+          <p class="contact-call__text">
+            For government requirements, commercial projects, teaming, real estate / REO, and veteran
+            housing support, call to speak directly with our team.
+          </p>
+          <a class="btn btn--gold" href="tel:+17277290204">Call Now</a>
+        </div>
+
+        <!-- Email inquiry form: stays hidden until CONTACT_EMAIL is set in main.js -->
+        <form class="contact-form reveal" data-contact-form novalidate hidden>
           <div class="field">
             <label for="cf-name">Name</label>
             <input id="cf-name" name="name" type="text" autocomplete="name" required>
