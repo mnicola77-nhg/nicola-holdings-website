@@ -85,6 +85,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .section--dark .ph, .section--charcoal-band .ph, .credentials .ph, .ph--dark { color: var(--on-dark-muted); }
 
+/* Verified identifiers (UEI, CAGE) */
+.data-id { font-weight: 500; letter-spacing: .08em; font-variant-numeric: tabular-nums; }
+
 /* ---------- Buttons ---------- */
 .btn {
   white-space: nowrap;

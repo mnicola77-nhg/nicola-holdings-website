@@ -39,8 +39,6 @@ Search for `data-placeholder` to find them all:
 
 | Item | Where |
 |---|---|
-| UEI | Credential bar, footer |
-| CAGE Code | Credential bar, footer |
 | Ownership status (e.g., woman-owned; SBA certification only once awarded) | Credential bar |
 | Primary NAICS | Credential bar |
 | SAM.gov registration status | NAICS section |
