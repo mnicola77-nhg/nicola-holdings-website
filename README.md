@@ -23,8 +23,8 @@ Official website repository for Nicola Holdings Group, LLC.
         source/                Original brand files as delivered (do not edit)
       favicon-*.png, apple-touch-icon.png, icon-*.png, og-image.jpg
   files/
-    capability-statement.pdf  Published capability statement
-  source/capability-statement/  Editable capability statement source, fonts, build script
+    capability-statement.pdf  Published capabilities statement
+  source/capability-statement/  Editable capabilities statement source, fonts, build script
 ```
 
 ## Brand
@@ -43,7 +43,7 @@ Items not yet displayed or still in preview:
 | NAICS 339950 and PSC 9905 remain "Target" (not on SAM profile). 236118 and 561790 are shown as Confirmed while being added to SAM — verify they appear on the SBA profile before launch | NAICS table |
 | Email inquiry form — hidden until `CONTACT_EMAIL` is set in `assets/js/main.js`; phone 727-729-0204 is the primary contact | Contact |
 
-## Capability Statement
+## Capabilities Statement
 
 - Published PDF: `files/capability-statement.pdf` (linked from the header, credential bar, and contact section).
 - Editable source: `source/capability-statement/capability-statement.html` (same fonts, palette, and logo files as the site).

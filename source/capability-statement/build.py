@@ -1,4 +1,4 @@
-"""Render the Nicola Holdings Group capability statement.
+"""Render the Nicola Holdings Group capabilities statement.
 
 Usage (from the repository root):
     pip install playwright && python -m playwright install chromium
