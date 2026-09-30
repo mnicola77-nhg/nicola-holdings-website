@@ -12,7 +12,7 @@
                   WOSB badge stays hidden. Add ?preview=final
                   to the page URL to see the finished, tag-free design without changing this. */
 const SITE = {
-  WOSB_CERTIFIED: false,
+  WOSB_CERTIFIED: true,
   CONTACT_EMAIL: "",
 };
 

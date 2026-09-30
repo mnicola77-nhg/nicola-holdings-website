@@ -39,7 +39,7 @@ Items not yet displayed or still in preview:
 
 | Item | Where |
 |---|---|
-| SBA WOSB certification — shown with a "Preview" tag; the official SBA "WOSB Certified" badge (`assets/images/certifications/`) is installed but hidden. Set `WOSB_CERTIFIED: true` in `assets/js/main.js` and rebuild the PDF with `--final` once SBA awards it. Replace the badge with the high-resolution file SBA provides at certification | Credential bar, NAICS section, footer, capabilities statement footer |
+| SBA WOSB certification — site and PDF currently display the certified design (SBA badge, no "Preview" tags). **Before launch, confirm SBA has awarded WOSB certification**; if not, set `WOSB_CERTIFIED: false` in `assets/js/main.js`, remove `class="cert-final"` from `<html>` in `index.html`, and rebuild the PDF without `--final` | Credential bar, NAICS section, footer, capabilities statement |
 | NAICS 339950 and PSC 9905 remain "Target" (not on SAM profile). 236118 and 561790 are shown as Confirmed while being added to SAM — verify they appear on the SBA profile before launch | NAICS table |
 | Email inquiry form — hidden until `CONTACT_EMAIL` is set in `assets/js/main.js`; phone 727-729-0204 is the primary contact | Contact |
 
@@ -49,8 +49,8 @@ Items not yet displayed or still in preview:
 - Editable source: `source/capability-statement/capability-statement.html` (same fonts, palette, and logo files as the site).
 - Rebuild after edits: `python source/capability-statement/build.py`. This writes the site PDF, a named copy
   (`Nicola-Holdings-Group-Capability-Statement.pdf`), and a 300 dpi preview PNG, and fails if content overflows one page.
-- WOSB: shows the same "Preview" tag as the website. When SBA certification is awarded, set
-  `WOSB_CERTIFIED: true` in `assets/js/main.js` **and** rebuild the PDF with `--final`.
+- WOSB: currently built with `--final` (SBA badge shown, no "Preview" tag), matching the website.
+  Rebuild with `python source/capability-statement/build.py --final` to keep this version.
 
 ## Custom domain (when ready)
 
