@@ -145,6 +145,9 @@
   /* ---------- Footer ---------- */
   .footer { margin-top: auto; background: var(--black); color: var(--cream); padding: .11in var(--px); display: grid; grid-template-columns: auto 1fr; gap: .24in; align-items: center; }
   .footer__mark { height: .4in; width: auto; display: block; }
+  .footer__badge { display: none; height: .4in; width: auto; }
+  .cert-final .footer { grid-template-columns: auto 1fr auto; }
+  .cert-final .footer__badge { display: block; }
   .footer__contact { display: grid; grid-template-columns: 1fr 1.45fr .9fr 1.5fr; }
   .footer__contact div { padding: 0 11pt; border-left: .6pt solid var(--rule-dark); }
   .footer__contact dt { color: var(--gold); margin-bottom: 2pt; }
@@ -302,6 +305,8 @@
       <div><dt class="label">Headquarters</dt><dd>Florida</dd></div>
       <div><dt class="label">UEI · CAGE</dt><dd>ZTD1DWXEN8N9 · 23PG0</dd></div>
     </dl>
+    <!-- Official SBA WOSB badge: rendered only in the --final build (after SBA certification) -->
+    <img class="footer__badge" src="../../assets/images/certifications/sba-wosb-certified.png" alt="U.S. Small Business Administration — WOSB Certified">
   </footer>
 
 </div>

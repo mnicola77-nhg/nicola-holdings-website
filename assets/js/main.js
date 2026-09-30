@@ -8,7 +8,8 @@
    CONTACT_EMAIL: the business inbox the contact form should address.
                   Leave empty until a verified business email exists.
    WOSB_CERTIFIED: set to true once SBA has awarded WOSB certification. While false,
-                  every WOSB reference carries a small "Preview" tag. Add ?preview=final
+                  every WOSB reference carries a small "Preview" tag and the official SBA
+                  WOSB badge stays hidden. Add ?preview=final
                   to the page URL to see the finished, tag-free design without changing this. */
 const SITE = {
   WOSB_CERTIFIED: false,

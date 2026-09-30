@@ -94,6 +94,13 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .section--cream .cert-preview, .naics__meta .cert-preview { color: var(--ink-muted); }
 .cert-final .cert-preview { display: none; }
+
+/* Official SBA WOSB badge — hidden until certification is awarded (SITE.WOSB_CERTIFIED). */
+.wosb-badge { display: none; height: auto; }
+.cert-final .wosb-badge { display: block; }
+.wosb-badge--panel { width: 84px; margin-top: .9rem; box-shadow: 0 0 0 1px var(--rule-light); }
+.site-footer__brand { display: flex; align-items: center; gap: 2rem; }
+.site-footer__brand .wosb-badge--footer { width: 78px; }
 .contact__link { text-decoration: none; border-bottom: 1px solid var(--gold); }
 .contact__link:hover { color: var(--ink-muted); }
 .contact__link--dark { color: var(--on-dark); }
