@@ -39,7 +39,7 @@ Items not yet displayed or still in preview:
 | Item | Where |
 |---|---|
 | SBA WOSB certification — displayed as a design preview with a "Preview" tag; set `WOSB_CERTIFIED: true` in `assets/js/main.js` once SBA awards it | Credential bar, NAICS section, footer |
-| NAICS 339950 and PSC 9905 remain "Target" (not on SAM profile). 236118 and 561790 are being added to SAM — list them as Confirmed once they appear on the SBA profile | NAICS table |
+| NAICS 339950 and PSC 9905 remain "Target" (not on SAM profile). 236118 and 561790 are shown as Confirmed while being added to SAM — verify they appear on the SBA profile before launch | NAICS table |
 | Email inquiry form — hidden until `CONTACT_EMAIL` is set in `assets/js/main.js`; phone 727-729-0204 is the primary contact | Contact |
 
 ## Capability Statement
