@@ -376,8 +376,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .market h3 { display: flex; align-items: baseline; gap: .8rem; font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; }
 .market h3::before { content: counter(mk, decimal-leading-zero); font-family: var(--font-body); font-size: .75rem; letter-spacing: .12em; color: var(--stone); font-weight: 500; }
 .market p { margin-top: .6rem; color: var(--ink-muted); font-size: .9688rem; }
-@media (max-width: 900px) { .markets { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .markets { grid-template-columns: 1fr; } }
+.markets--four { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .markets, .markets--four { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .markets, .markets--four { grid-template-columns: 1fr; } }
 
 /* ---------- Government ---------- */
 .gov { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2.5rem, 6vw, 6rem); }
@@ -431,7 +432,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .naics__table tbody tr { transition: background-color .25s; }
 .naics__table tbody tr:hover { background: var(--paper); }
 .naics__code { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; letter-spacing: .02em; white-space: nowrap; }
-.naics__table td:nth-child(3) { color: var(--ink-muted); }
 .naics__primary { display: inline-block; margin-left: .35rem; font-size: .6563rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-muted); }
 .text-link--sm { margin-left: .5rem; font-size: .8125rem; }
 .naics__meta { background: var(--paper); padding: 1.75rem; }
@@ -444,8 +444,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .naics__table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .naics__table tr { display: grid; grid-template-columns: auto 1fr; gap: .25rem 1rem; padding: 1rem 0; border-bottom: 1px solid var(--rule-light); }
   .naics__table td { padding: 0; border: 0; }
-  .naics__table td:nth-child(1) { grid-row: span 2; }
-  .naics__table td:nth-child(3) { font-size: .8125rem; }
 }
 
 /* ---------- Teaming ---------- */
